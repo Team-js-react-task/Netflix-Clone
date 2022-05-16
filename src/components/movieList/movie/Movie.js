@@ -34,9 +34,9 @@ export default function Movie(props) {
             </Card>
 
             {
-                chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie} />
+                chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie} updateMovie = {props.updateMovie}/>
             }
-
+ 
 
 
         </div>

@@ -9,7 +9,7 @@ export default function MovieList(props) {
                     return (
                         <>
                             <div>
-                                <Movie movie={Mov} />
+                                <Movie movie={Mov} updateMovie = {props.updateMovie} />
                             </div>
                         </>
                     );

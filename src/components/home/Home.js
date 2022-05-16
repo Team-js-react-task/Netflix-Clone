@@ -12,6 +12,19 @@ export default function Home() {
         setMovies(movieData);
     }
 
+    function updateMovie(newMovie, id) {
+        let updatedMovies = movies.map((movie) => {
+            if (movie.id === id) {
+                movie.comment = newMovie.userComment;
+                return movie;
+            } else {
+                return movie;
+            }
+        })
+
+        setMovies = (updatedMovies);
+    }
+
     useEffect(() => {
         getMovie();
     }, []);
@@ -29,7 +42,7 @@ export default function Home() {
 
                 {
 
-                    (movies.length > 0) && <MovieList movies={movies} />
+                    (movies.length > 0) && <MovieList movies={movies} updateMovie = {updateMovie} />
                 }
             </div>
         </>
